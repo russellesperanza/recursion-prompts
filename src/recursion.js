@@ -123,7 +123,7 @@ var exponent = function(base, exp) {
   } else if (exp > 0) {
     return base * exponent(base, exp - 1);
   } else {
-    return (1 / base) * exponent(base, exp + 1);
+    return base / exponent(base, -exp + 1);
   }
 };
 
@@ -132,6 +132,7 @@ var exponent = function(base, exp) {
 // powerOfTwo(16); // true
 // powerOfTwo(10); // false
 var powerOfTwo = function(n) {
+  
 };
 
 // 9. Write a function that reverses a string.
